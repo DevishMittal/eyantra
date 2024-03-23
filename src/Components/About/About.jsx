@@ -5,9 +5,9 @@ import './About.css'
 const Programs = () => {
   return (
     <div className='about'>
-        <h1>About Us</h1>
+        {/* <h1>About Us</h1>
         <h3>Our Mission and Vision</h3>
-        
+         */}
         <div className='mission'>
           <div className='mission-text'>
             <h2>Mission</h2>
