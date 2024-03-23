@@ -9,8 +9,8 @@ const navbar = () => {
       <ul>
         <li>Home</li>
         <li>About Us</li>
+        <li>Activity</li>
         <li>Faculty</li>
-        <li>Activities</li>
         <li>Gallery</li>
       </ul>
     </nav>
