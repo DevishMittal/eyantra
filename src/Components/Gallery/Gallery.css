@@ -1,0 +1,43 @@
+/* .campus img{
+    margin: 40px auto;
+    width: 50%;
+    text-align: center;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.gallery img {
+    width: 40%;
+    border-radius: 10px;
+} */
+/* Gallery.css */
+.campus img {
+    margin: 40px auto;
+    width: 90%;
+    text-align: center;
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.gallery img {
+    width: 40%;
+    border-radius: 10px;
+    cursor: pointer; /* Add pointer cursor to indicate interactivity */
+}
+
+/* Apply scale transform on hover or click */
+.gallery img:hover,
+.gallery img:focus {
+    transform: scale(1.5); /* Increase size to 120% on hover or focus */
+}
