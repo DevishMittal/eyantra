@@ -28,9 +28,7 @@ Supercomputing. Cluster, GRID and Cloud computing</p>
               </div>
         </div>
         <div className='mission'>
-        <div className='image'>
-              <img src={whatPhoto2} alt="" />
-              </div>
+       
           <div className='mission-text'>
             <h2>Vision</h2>
             <p><strong>Static and Dynamic Analysis for Performance Modeling and Security: </strong>This involves analyzing
@@ -54,6 +52,9 @@ architectures and accelerators like GPUs. <br />
 software, which includes features like machine learning-based auto-tuning and load balancing, to
 optimize performance and resource utilization in parallel computing environments.</p>
           </div>
+           <div className='image'>
+              <img src={whatPhoto2} alt="" />
+              </div>
  
         </div>
     </div>

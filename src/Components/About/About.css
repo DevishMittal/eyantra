@@ -33,3 +33,37 @@ flex-direction: column;
     width: 350px;
     margin-top:1rem;
 }
+
+/* ------media query--------*/ 
+/* @media (max-width: 650px){
+    .mission-text{
+        font-size: 15px;
+    }
+    .image{
+        width: ;
+    }
+} */
+@media (max-width: 650px) {
+    .mission {
+      flex-direction: column; /* Stack items vertically on mobile */
+      align-items: center; /* Center items horizontally on mobile */
+    }
+  
+    .mission-text {
+      font-size: 15px;
+      text-align: center; /* Center text on mobile */
+      margin: 20px; /* Add margin for spacing */
+    }
+  
+    .image {
+      width: 100%; /* Make the image take full width */
+    }
+  
+    .image img {
+      width: 80%; /* Set image width to 80% of the container width */
+      max-width: 250px; /* Set maximum width for the image */
+      margin-top: 1rem;
+      margin-left: 45px;
+    }
+  }
+  

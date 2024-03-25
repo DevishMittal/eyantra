@@ -19,3 +19,11 @@ a {
     padding-left: 5%;
     padding-right: 8%;
 }
+
+/* ------media query--------*/
+@media (max-width: 1200px){
+    .container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

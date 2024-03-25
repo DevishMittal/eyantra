@@ -2,59 +2,96 @@ import React, { useRef} from 'react'
 import './Faculty.css'
 import nextIcon from '../../assets/next-icon.png'
 import backIcon from '../../assets/back-icon.png'
-import fac_1 from '../../assets/faculty_img/Ponmagal R S.png'
-import fac_2 from '../../assets/faculty_img/Kirubanantham P.png'
-import fac_3 from '../../assets/faculty_img/Jeya R.png'
-import fac_4 from '../../assets/faculty_img/Thamizhikkavi P.png'
-import fac_5 from '../../assets/faculty_img/Kanmani S P.png'
-import fac_6 from '../../assets/faculty_img/Jagadeesan S.png'
-import fac_7 from '../../assets/faculty_img/Sathyapriya L.png'
-import fac_8 from '../../assets/faculty_img/Ramya M.png'
-import fac_9 from '../../assets/faculty_img/Rekha G.png'
-import fac_10 from '../../assets/faculty_img/Nagadevi S.png'
-import fac_11 from '../../assets/faculty_img/Anbarasi A.png'
+import fac_1 from '../../assets/faculty_img/Ponmagal R S.jpg'
+import fac_2 from '../../assets/faculty_img/Kirubanantham P.jpg'
+import fac_3 from '../../assets/faculty_img/Jeya R.jpg'
+import fac_4 from '../../assets/faculty_img/Thamizhikkavi P.jpg'
+import fac_5 from '../../assets/faculty_img/Kanmani S P.jpg'
+import fac_6 from '../../assets/faculty_img/Jagadeesan S.jpg'
+import fac_7 from '../../assets/faculty_img/Sathyapriya L.jpg'
+import fac_8 from '../../assets/faculty_img/Ramya M.jpg'
+import fac_9 from '../../assets/faculty_img/Rekha G.jpg'
+import fac_10 from '../../assets/faculty_img/Nagadevi S.jpg'
+import fac_11 from '../../assets/faculty_img/Anbarasi A.jpg'
 import fac_12 from '../../assets/faculty_img/Dorathi Jayaseeli D.png'
-import fac_13 from '../../assets/faculty_img/Vidhya R.png'
-import fac_14 from '../../assets/faculty_img/Revathi M.png'
-import fac_15 from '../../assets/faculty_img/Thamizhamuthu R.png'
-import fac_16 from '../../assets/faculty_img/Ajanthaa Lakkshmanan.png'
-import fac_17 from '../../assets/faculty_img/Prakash B.png'
-import fac_18 from '../../assets/faculty_img/Brindha R.png'
-import fac_19 from '../../assets/faculty_img/Malathi D.png'
-import fac_20 from '../../assets/faculty_img/Saranya V S.png'
-import fac_21 from '../../assets/faculty_img/Arul Murugan A.png'
-import fac_22 from '../../assets/faculty_img/Amutha B.png'
-import fac_23 from '../../assets/faculty_img/Deeban V.png'
-import fac_24 from '../../assets/faculty_img/Deeba K.png'
-import fac_25 from '../../assets/faculty_img/Vathana D.png'
-import fac_26 from '../../assets/faculty_img/Vanusha D.png'
-import fac_27 from '../../assets/faculty_img/Arulprakash M.png'
-import fac_28 from '../../assets/faculty_img/Renuka Devi P.png'
+import fac_13 from '../../assets/faculty_img/Vidhya R.jpg'
+import fac_14 from '../../assets/faculty_img/Revathi M.jpg'
+import fac_15 from '../../assets/faculty_img/Thamizhamuthu R.jpg'
+import fac_16 from '../../assets/faculty_img/Ajanthaa Lakkshmanan.jpg'
+import fac_17 from '../../assets/faculty_img/Prakash B.jpg'
+import fac_18 from '../../assets/faculty_img/Brindha R.jpg'
+import fac_19 from '../../assets/faculty_img/Malathi D.jpg'
+import fac_20 from '../../assets/faculty_img/Saranya V S.jpg'
+import fac_21 from '../../assets/faculty_img/Arul Murugan A.jpg'
+import fac_22 from '../../assets/faculty_img/Amutha B.jpg'
+import fac_23 from '../../assets/faculty_img/Deeban V.jpg'
+import fac_24 from '../../assets/faculty_img/Deeba K.jpg'
+import fac_25 from '../../assets/faculty_img/Vathana D.jpg'
+import fac_26 from '../../assets/faculty_img/Vanusha D.jpg'
+import fac_27 from '../../assets/faculty_img/Arulprakash M.jpg'
+import fac_28 from '../../assets/faculty_img/Renuka Devi P.jpg'
 
+// const Faculty = () => {
+
+//     const slider = useRef();
+//     let tx = 0;
+
+// const slideForward = ()=> {
+
+//     if(tx > -98){
+//         tx -= 3.7;
+//     }
+//     slider.current.style.transform = `translateX(${tx}%)`
+
+// }
+// const slideBackward = ()=> {
+
+//     if(tx < 0){
+//         tx += 4;
+//     }
+//     slider.current.style.transform = `translateX(${tx}%)`
+// }  
+//   return (
+//     <div className='faculty'>
+//         <img src={nextIcon} alt="" className='next-btn' onClick={slideForward} />
+//         <img src={backIcon} alt="" className='back-btn' onClick={slideBackward} />
 const Faculty = () => {
-
     const slider = useRef();
     let tx = 0;
 
-const slideForward = ()=> {
+    // Function for sliding on desktop
+    const slideDesktop = (direction) => {
+        if (direction === 'forward' && tx > -90) {
+            tx -= 3.7;
+        } else if (direction === 'backward' && tx < -2) {
+            tx += 4;
+        }
+        slider.current.style.transform = `translateX(${tx}%)`;
+    };
 
-    if(tx > -88){
-        tx -= 6;
-    }
-    slider.current.style.transform = `translateX(${tx}%)`
+    // Function for sliding on mobile
+    const slideMobile = (direction) => {
+        if (direction === 'forward' && tx > -95) {
+            tx -= 1.5;
+        } else if (direction === 'backward' && tx < -1) {
+            tx += 3.5;
+        }
+        slider.current.style.transform = `translateX(${tx}%)`;
+    };
 
-}
-const slideBackward = ()=> {
+    const handleSlide = (direction) => {
+        const isMobile = window.innerWidth <= 600;
+        if (isMobile) {
+            slideMobile(direction);
+        } else {
+            slideDesktop(direction);
+        }
+    };
 
-    if(tx < -5){
-        tx += 6;
-    }
-    slider.current.style.transform = `translateX(${tx}%)`
-}  
-  return (
-    <div className='faculty'>
-        <img src={nextIcon} alt="" className='next-btn' onClick={slideForward} />
-        <img src={backIcon} alt="" className='back-btn' onClick={slideBackward} />
+    return (
+        <div className='faculty'>
+            <img src={nextIcon} alt='' className='next-btn' onClick={() => handleSlide('forward')} />
+            <img src={backIcon} alt='' className='back-btn' onClick={() => handleSlide('backward')} />
       <div className="slider">
         <ul ref={slider}>
             <li>

@@ -24,7 +24,7 @@
 }
 .slider ul{
     display: flex;
-    width: 935%;
+    width: 1035%;
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -42,11 +42,86 @@
 
 }
 .slide img {
-   width: 65px;
+   width: 80px;
    border-radius: 50%;
    margin-right: 10px;
-   border: 4px solid #212ea0;
+   border: 6px solid #212ea0;
 }
 .user-info h3 {
     color:#212ea0;
+}
+
+/* @media (max-width: 800px) {
+    .faculty{
+        padding: 0 20px;
+    }
+    .next-btn, .back-btn {
+        padding: 5px;
+        width: 35px;
+    }
+    .faculty ul li {
+        padding: 5px;
+    }
+    .slide {
+        padding: 5px;
+    }
+    .slide img {
+        width: 30px;
+        border: 3px solid #212ea0;
+    }
+}
+@media (max-width: 600px) {
+    .user-info {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 9px;
+    }
+    .user-info h3 {
+        font-size: 7px;
+        
+    }
+    .slider p {
+        font-size: 9px;
+    }
+    .slider ul{
+        width: 3500%;
+    }
+} */
+@media (max-width: 800px) {
+    .faculty {
+        padding: 0 20px;
+    }
+    .next-btn, .back-btn {
+        padding: 5px;
+        width: 35px;
+    }
+    .slider ul li {
+        width: 90%; /* Adjust card width */
+        margin: 0 auto; /* Center cards */
+        padding: 10px; /* Add padding for spacing */
+    }
+    .slide {
+        padding: 20px; /* Increase padding for better spacing */
+    }
+    .slide img {
+        width: 50px; /* Adjust image size */
+        border: 4px solid #212ea0;
+    }
+}
+
+@media (max-width: 600px) {
+    .user-info {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 9px;
+    }
+    .user-info h3 {
+        font-size: 7px;
+    }
+    .slider p {
+        font-size: 9px;
+    }
+    .slider ul {
+        width: 3300%; /* Adjust width to fit all cards */
+    }
 }
