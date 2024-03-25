@@ -1,6 +1,6 @@
 import React from 'react'
-import whatPhoto1 from '../../assets/mission.png'
-import whatPhoto2 from '../../assets/vision.png'
+import whatPhoto1 from '../../assets/mission.jpg'
+import whatPhoto2 from '../../assets/vision.jpg'
 import './About.css'
 const Programs = () => {
   return (
