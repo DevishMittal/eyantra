@@ -1,6 +1,6 @@
 import React from 'react'
-import whatPhoto1 from '../../assets/Group.jpg'
-import whatPhoto2 from '../../assets/Quiz.jpg'
+import whatPhoto1 from '../../assets/mission.png'
+import whatPhoto2 from '../../assets/vision.png'
 import './About.css'
 const Programs = () => {
   return (
@@ -11,7 +11,17 @@ const Programs = () => {
         <div className='mission'>
           <div className='mission-text'>
             <h2>Mission</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            <p>The High-Performance Computing Laboratory (HPCL)
+is going to be established as a part of Department of
+Computing Technologies under School of Computing,
+SRMIST. In HPCL, we believe that achieving high
+performance must not come at the cost of software
+quality, maintainability, and extensibility. Moreover, we
+believe that the productivity and happiness of HPC software developers is important to the
+overall success of HPC in enabling more and better science across many scientific domains.
+HPCL aims to spread its wings across several areas, including optimizing compilers,
+performance modeling and optimization, parallel algorithms, and software engineering,
+Supercomputing. Cluster, GRID and Cloud computing</p>
           </div>
             <div className='image'>
               <img src={whatPhoto1} alt="" />
@@ -23,7 +33,26 @@ const Programs = () => {
               </div>
           <div className='mission-text'>
             <h2>Vision</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            <p><strong>Static and Dynamic Analysis for Performance Modeling and Security: </strong>This involves analyzing
+software statically (without execution) and dynamically (during execution) to understand its
+performance characteristics and detect potential security vulnerabilities. Machine learning
+techniques can be used to model runtime behavior, and various approaches can be employed to
+ensure software quality. <br />
+ <strong>Data Mining for HPC Software Engineering: </strong> Data mining techniques can be applied to study
+and improve the processes involved in developing software for High-Performance Computing
+(HPC) environments. This can include analyzing large datasets to identify patterns and optimize
+software engineering practices. <br />
+<strong>Natural Language Processing for Developer Productivity:</strong>  Natural Language Processing (NLP)
+methods can be used to study and enhance the productivity of HPC software developers. This
+might involve analyzing text data such as code comments, documentation, and communication
+among developers to improve collaboration and efficiency. <br />
+<strong>Designing and Optimizing Algorithms:</strong> This includes developing new algorithms or improving
+existing ones in various application areas such as dynamic graphs, computational physics, and
+computational biology. These algorithms are designed to run efficiently on parallel computing
+architectures and accelerators like GPUs. <br />
+ <strong>Parallel Scientific Software Environments:</strong> Building environments for parallel scientific
+software, which includes features like machine learning-based auto-tuning and load balancing, to
+optimize performance and resource utilization in parallel computing environments.</p>
           </div>
  
         </div>
