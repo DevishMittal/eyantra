@@ -2,7 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import logo from '../../assets/srm.svg'
 
-const navbar = () => {
+const Navbar = () => {
   return (
     <nav className='container'>
       <img src={logo} alt="" className='logo'/>
@@ -17,4 +17,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar
