@@ -1,10 +1,10 @@
 import React from 'react'
-import Navbar from './Components/Navbar/Navbar'
-import Hero from './Components/Hero/Hero'
-import About from './Components/About/About'
-import Faculty from './Components/Faculty/Faculty'
-import Title from './Components/Title/Title'
-import Gallery from './Components/Gallery/Gallery'
+import Navbar from './Components/Navbar/Navbar.jsx'
+import Hero from './Components/Hero/Hero.jsx'
+import About from './Components/About/About.jsx'
+import Faculty from './Components/Faculty/Faculty.jsx'
+import Title from './Components/Title/Title.jsx'
+import Gallery from './Components/Gallery/Gallery.jsx'
 
 
 const App = () => {
