@@ -35,24 +35,31 @@ Supercomputing. Cluster, GRID and Cloud computing</p>
 software statically (without execution) and dynamically (during execution) to understand its
 performance characteristics and detect potential security vulnerabilities. Machine learning
 techniques can be used to model runtime behavior, and various approaches can be employed to
-ensure software quality. <br />
- <strong>Data Mining for HPC Software Engineering: </strong> Data mining techniques can be applied to study
+ensure software quality. <br /> </p>
+<p> <strong>Data Mining for HPC Software Engineering: </strong> Data mining techniques can be applied to study
 and improve the processes involved in developing software for High-Performance Computing
 (HPC) environments. This can include analyzing large datasets to identify patterns and optimize
-software engineering practices. <br />
-<strong>Natural Language Processing for Developer Productivity:</strong>  Natural Language Processing (NLP)
+software engineering practices. <br /></p>
+<p><strong>Natural Language Processing for Developer Productivity:</strong>  Natural Language Processing (NLP)
 methods can be used to study and enhance the productivity of HPC software developers. This
 might involve analyzing text data such as code comments, documentation, and communication
-among developers to improve collaboration and efficiency. <br />
-<strong>Designing and Optimizing Algorithms:</strong> This includes developing new algorithms or improving
+among developers to improve collaboration and efficiency. <br /></p>
+
+<p><strong>Designing and Optimizing Algorithms:</strong> This includes developing new algorithms or improving
 existing ones in various application areas such as dynamic graphs, computational physics, and
 computational biology. These algorithms are designed to run efficiently on parallel computing
-architectures and accelerators like GPUs. <br />
- <strong>Parallel Scientific Software Environments:</strong> Building environments for parallel scientific
+architectures and accelerators like GPUs. <br /></p>
+
+<p> <strong>Parallel Scientific Software Environments:</strong> Building environments for parallel scientific
 software, which includes features like machine learning-based auto-tuning and load balancing, to
 optimize performance and resource utilization in parallel computing environments.</p>
+
           </div>
-           <div className='image'>
+           <div className='image set'>
+              <img src={whatPhoto2} alt="" />
+              <img src={whatPhoto2} alt="" />
+              <img src={whatPhoto2} alt="" />
+              <img src={whatPhoto2} alt="" />
               <img src={whatPhoto2} alt="" />
               </div>
  

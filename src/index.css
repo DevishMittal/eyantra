@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 
 *{
     margin: 0;
@@ -16,8 +18,8 @@ a {
     cursor: pointer;
 }
 .container {
-    padding-left: 5%;
-    padding-right: 8%;
+    padding-left: 3%;
+    padding-right: 6%;
 }
 
 /* ------media query--------*/

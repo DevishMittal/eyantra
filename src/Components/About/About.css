@@ -4,10 +4,19 @@
 }
 .about h1 {
     font-size: 3rem;
+    
 }
 .about > h3 {
     font-size: 2rem;
     font-weight: 400;
+}
+.mission {
+        box-shadow: 0 0 20px rgba(55, 21, 225, 0.75);
+        padding: 40px;
+        border-radius: 10px;
+        color: #3835f3;
+        line-height: 1.4;
+    
 }
 h2 {
 margin: 20px;
@@ -24,6 +33,10 @@ font-size: 3rem;
     font-size: 1.5rem;
 
 }
+
+#root > div > div:nth-child(3) > div.about > div:nth-child(2) > div.mission-text > p {
+line-height: 2.5;
+}
 .image {
 display: flex;
 flex-direction: column;
@@ -32,8 +45,17 @@ flex-direction: column;
 .image img{
     width: 350px;
     margin-top:1rem;
-}
+    box-shadow: 0 0 20px rgb(15, 198, 239);
+    padding: 10px;
+    border-radius: 15px;
+    color: #3835f3;
 
+}
+.set img{
+    width: 260px;
+    margin: 30px;
+    
+}
 /* ------media query--------*/ 
 /* @media (max-width: 650px){
     .mission-text{
