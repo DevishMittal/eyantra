@@ -6,7 +6,7 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import srm_logo from '../../assets/srm.svg'
-import acc_logo from '../../assets/OIG2_upscayl_4x_realesrgan-x4plus.png'
+// import acc_logo from '../../assets/OIG2_upscayl_4x_realesrgan-x4plus.png'
 
 const Contact = () => {
   return (

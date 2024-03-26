@@ -14,7 +14,7 @@ import img10 from '../../assets/projects/Analysis on model’s performance and m
 import img11 from '../../assets/projects/Design and development of Virtual Digital Assistants – Robotic Assistive device with knowledge inferences of AI.png'
 import img12 from '../../assets/projects/Development of Interactive, Creative, platform to teach AI, deep learning, and data science.png'
 import img13 from '../../assets/projects/Generative AI to Build Content for Real-World Applications- using X AI and CUDA.png'
-import img14 from '../../assets/projects/Visualization of Digital Twin integrated Smart City Applications as traffic intensities, air quality and noise pollution [Case Study – SRM Premises]..png'
+import img14 from '../../assets/projects/Visualization of Digital Twin integrated Smart City Applications as traffic intensities, air quality and noise pollution [Case Study – SRM Premises].png'
 
 const ProjectGrid = () => {
   // State to manage whether abstract text is visible or not
