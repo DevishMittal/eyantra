@@ -46,7 +46,7 @@ const Gallery1 = () => {
     <section className="section-with-image" onClick={handleClick}>
       <div className="image-container">
         <img src={gal_1} alt="Background" />
-        <div className="overlay"></div> {/* Gradient overlay */}
+        <div className="overlay2"></div> {/* Gradient overlay */}
         <div className="content">
           <h3>MOU-CDAC</h3> {/* Text above the image */}
         </div>
@@ -76,7 +76,7 @@ export const SecondSectionWithImage = () => {
     <section className="section-with-image" onClick={handleClick}>
       <div className="image-container">
         <img src={gal_3} alt="Background" />
-        <div className="overlay"></div> {/* Gradient overlay */}
+        <div className="overlay2"></div> {/* Gradient overlay */}
         <div className="content">
           <h3>Outreach Program</h3> {/* Text above the image */}
         </div>
