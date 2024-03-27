@@ -1,6 +1,6 @@
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
     gap: 20px; /* Adjust the gap between projects */
   }
   
@@ -13,6 +13,8 @@
     width: 100%; /* Adjust the image size */
     height: auto;
     opacity: 0.21; /* Slightly transparent */
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgb(228, 239, 15);
   }
   
   .overlay {
@@ -40,11 +42,38 @@
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Center the text */
     color: rgb(77, 92, 255); /* Text color */
-    font-size: 19px; /* Enlarge text size */
+    font-size: 15px; /* Enlarge text size */
     font-weight: 800;
-    width: 80%;
+    width: 90%;
+    line-height:1.5;
   }
   .text-above-image p {
     color: brown;
     
   }
+
+
+  /* For mobile screens */
+@media screen and (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust the number of columns for mobile */
+    gap: 10px; /* Adjust the gap between projects for mobile */
+  }
+
+  .project img {
+    height: auto; /* Reset height to maintain aspect ratio */
+  }
+  .text-above-image {
+    position: absolute;
+    top: 40%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: rgb(77, 92, 255); /* Text color */
+    font-size: 9px; /* Enlarge text size */
+    font-weight: 800;
+    width: 90%;
+    line-height:1.5;
+  }
+}
+
+

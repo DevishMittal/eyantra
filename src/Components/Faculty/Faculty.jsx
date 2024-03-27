@@ -1,4 +1,4 @@
-import React, { useRef} from 'react'
+import React, { useRef, useEffect} from 'react'
 import './Faculty.css'
 import nextIcon from '../../assets/next-icon.png'
 import backIcon from '../../assets/back-icon.png'
@@ -31,63 +31,74 @@ import fac_26 from '../../assets/faculty_img/Vanusha D.jpg'
 import fac_27 from '../../assets/faculty_img/Arulprakash M.jpg'
 import fac_28 from '../../assets/faculty_img/Renuka Devi P.jpg'
 import fac_29 from '../../assets/faculty_img/Jeyasekar.jpg'
+import fac_30 from '../../assets/faculty_img/jansik.jpg'
+import fac_31 from '../../assets/faculty_img/Dr. Ramaprabha J.jpg'
 
-// const Faculty = () => {
 
-//     const slider = useRef();
-//     let tx = 0;
-
-// const slideForward = ()=> {
-
-//     if(tx > -98){
-//         tx -= 3.7;
-//     }
-//     slider.current.style.transform = `translateX(${tx}%)`
-
-// }
-// const slideBackward = ()=> {
-
-//     if(tx < 0){
-//         tx += 4;
-//     }
-//     slider.current.style.transform = `translateX(${tx}%)`
-// }  
-//   return (
-//     <div className='faculty'>
-//         <img src={nextIcon} alt="" className='next-btn' onClick={slideForward} />
-//         <img src={backIcon} alt="" className='back-btn' onClick={slideBackward} />
 const Faculty = () => {
     const slider = useRef();
     let tx = 0;
+    let intervalId
+
+    useEffect(() => {
+        startAutoSlide();
+        return () => {
+          clearInterval(intervalId);
+        };
+      }, []);
+    
+      const startAutoSlide = () => {
+        intervalId = setInterval(() => {
+          slide('forward');
+        }, 1000); // Adjust the interval duration (in milliseconds)
+      };
+    
+      const stopAutoSlide = () => {
+        clearInterval(intervalId);
+      };
+
+      const slide = (direction) => {
+        if (direction === 'forward' && tx > -90) {
+          tx -= 3.7;
+        } else if (direction === 'backward' && tx < -2) {
+          tx += 4;
+        }
+        slider.current.style.transform = `translateX(${tx}%)`;
+      };
+    
+      const handleSlide = (direction) => {
+        stopAutoSlide();
+        slide(direction);
+      };
 
     // Function for sliding on desktop
-    const slideDesktop = (direction) => {
-        if (direction === 'forward' && tx > -90) {
-            tx -= 3.7;
-        } else if (direction === 'backward' && tx < -2) {
-            tx += 4;
-        }
-        slider.current.style.transform = `translateX(${tx}%)`;
-    };
+    // const slideDesktop = (direction) => {
+    //     if (direction === 'forward' && tx > -90) {
+    //         tx -= 3.7;
+    //     } else if (direction === 'backward' && tx < -2) {
+    //         tx += 4;
+    //     }
+    //     slider.current.style.transform = `translateX(${tx}%)`;
+    // };
 
-    // Function for sliding on mobile
-    const slideMobile = (direction) => {
-        if (direction === 'forward' && tx > -95) {
-            tx -= 1.5;
-        } else if (direction === 'backward' && tx < -1) {
-            tx += 3.5;
-        }
-        slider.current.style.transform = `translateX(${tx}%)`;
-    };
+    // // Function for sliding on mobile
+    // const slideMobile = (direction) => {
+    //     if (direction === 'forward' && tx > -95) {
+    //         tx -= 1.5;
+    //     } else if (direction === 'backward' && tx < -1) {
+    //         tx += 3.5;
+    //     }
+    //     slider.current.style.transform = `translateX(${tx}%)`;
+    // };
 
-    const handleSlide = (direction) => {
-        const isMobile = window.innerWidth <= 600;
-        if (isMobile) {
-            slideMobile(direction);
-        } else {
-            slideDesktop(direction);
-        }
-    };
+    // const handleSlide = (direction) => {
+    //     const isMobile = window.innerWidth <= 600;
+    //     if (isMobile) {
+    //         slideMobile(direction);
+    //     } else {
+    //         slideDesktop(direction);
+    //     }
+    // };
 
     return (
         <div className='faculty'>
@@ -101,11 +112,11 @@ const Faculty = () => {
                     <div className="user-info">
                         <img src={fac_22} alt="" />
                         <div>
-                            <h3>B Amutha</h3>
+                            <h3>Dr. B Amutha</h3>
                             <span>Professor</span>
                         </div>
                     </div>
-                    <p>Department of Computing Technologies <br />
+                    <p>Department of Computing Technologies<br />
                         Mail Id: amuthab@srmist.edu.in
                     </p>
                 </div>
@@ -184,14 +195,14 @@ const Faculty = () => {
             <li>
                 <div className="slide">
                     <div className="user-info">
-                        <img src={fac_2} alt="" />
+                        <img src={fac_30} alt="" />
                         <div>
-                            <h3>Dr.Kirubanantham P.</h3>
+                            <h3>Dr. Jansi K R</h3>
                             <span>Assistant Professor</span>
                         </div>
                     </div>
                     <p>Department of Computing Technologies <br />
-                        Mail Id: kirubanp2@srmist.edu.in 
+                        Mail Id: jansik@srmist.edu.in
                     </p>
                 </div>
             </li>
@@ -206,63 +217,6 @@ const Faculty = () => {
                     </div>
                     <p>Department of Computing Technologies <br />
                         Mail Id: jeyar@srmist.edu.in
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_5} alt="" />
-                        <div>
-                            <h3>Ms.Kanmani S.P.</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: kanmanis@srmist.edu.in 
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_6} alt="" />
-                        <div>
-                            <h3>Jagadeesan S.</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: jagadees@srmist.edu.in 
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_7} alt="" />
-                        <div>
-                            <h3>Dr.Sathyapriya L.</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: sathyapl@srmist.edu.in 
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_8} alt="" />
-                        <div>
-                            <h3>Ramya.M</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: ramyam5@srmist.edu.in 
                     </p>
                 </div>
             </li>
@@ -283,172 +237,14 @@ const Faculty = () => {
             <li>
                 <div className="slide">
                     <div className="user-info">
-                        <img src={fac_11} alt="" />
+                        <img src={fac_6} alt="" />
                         <div>
-                            <h3>Dr.A.Anbarasi</h3>
+                            <h3>Dr. Jagadeesan S.</h3>
                             <span>Assistant Professor</span>
                         </div>
                     </div>
                     <p>Department of Computing Technologies <br />
-                        Mail Id: anbarasa3@srmist.edu.in
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_13} alt="" />
-                        <div>
-                            <h3>Dr.R.Vidhya</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: vidhyar@srmist.edu.in
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_14} alt="" />
-                        <div>
-                            <h3>Dr.Revathi M.</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: revathim@srmist.edu.in
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_15} alt="" />
-                        <div>
-                            <h3>Dr.R.Thamizhamuthu</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: thamizhr@srmist.edu.in
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_16} alt="" />
-                        <div>
-                            <h3>Dr.Ajanthaa Lakkshmanan</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: ajanthal@srmist.edu.in
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_17} alt="" />
-                        <div>
-                            <h3>Dr.B.Prakash</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: prakashb@srmist.edu.in
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_18} alt="" />
-                        <div>
-                            <h3>R.Brindha</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: brindhar1@srmist.edu.in
-                    </p>
-                </div>
-            </li>
-
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_20} alt="" />
-                        <div>
-                            <h3>Saranya V.S.</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: saranyav3@srmist.edu.in
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_21} alt="" />
-                        <div>
-                            <h3>Dr.A.Arulmurugan</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: arulmura1@srmist.edu.in
-                    </p>
-                </div>
-            </li>
-
-
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_24} alt="" />
-                        <div>
-                            <h3>Dr.K.Deeba</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: deebak@srmist.edu.in 
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_25} alt="" />
-                        <div>
-                            <h3>Vathana D.</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: vathanad@srmist.edu.in 
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div className="slide">
-                    <div className="user-info">
-                        <img src={fac_26} alt="" />
-                        <div>
-                            <h3>D.Vanusha</h3>
-                            <span>Assistant Professor</span>
-                        </div>
-                    </div>
-                    <p>Department of Computing Technologies <br />
-                        Mail Id: vanushad@srmist.edu.in 
+                        Mail Id: jagadees@srmist.edu.in 
                     </p>
                 </div>
             </li>
@@ -469,9 +265,93 @@ const Faculty = () => {
             <li>
                 <div className="slide">
                     <div className="user-info">
+                        <img src={fac_13} alt="" />
+                        <div>
+                            <h3>Dr.R.Vidhya</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: vidhyar@srmist.edu.in
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_24} alt="" />
+                        <div>
+                            <h3>Dr.K.Deeba</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: deebak@srmist.edu.in 
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_26} alt="" />
+                        <div>
+                            <h3>Mrs. D.Vanusha</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: vanushad@srmist.edu.in 
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_5} alt="" />
+                        <div>
+                            <h3>Mrs. Kanmani S.P.</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: kanmanis@srmist.edu.in 
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_25} alt="" />
+                        <div>
+                            <h3>Mrs. Vathana D.</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: vathanad@srmist.edu.in 
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_14} alt="" />
+                        <div>
+                            <h3>Dr.Revathi M.</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: revathim@srmist.edu.in
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
                         <img src={fac_28} alt="" />
                         <div>
-                            <h3>P.Renukadevi</h3>
+                            <h3>Mrs. P.Renukadevi</h3>
                             <span>Assistant Professor</span>
                         </div>
                     </div>
@@ -483,10 +363,152 @@ const Faculty = () => {
             <li>
                 <div className="slide">
                     <div className="user-info">
+                        <img src={fac_18} alt="" />
+                        <div>
+                            <h3>Mrs. R.Brindha</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: brindhar1@srmist.edu.in
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_31} alt="" />
+                        <div>
+                            <h3>Dr. Ramaprabha J.</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: ramapraj@srmist.edu.in
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_2} alt="" />
+                        <div>
+                            <h3>Dr.Kirubanantham P.</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: kirubanp2@srmist.edu.in 
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_17} alt="" />
+                        <div>
+                            <h3>Dr.B.Prakash</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: prakashb@srmist.edu.in
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_15} alt="" />
+                        <div>
+                            <h3>Dr.R.Thamizhamuthu</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: thamizhr@srmist.edu.in
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_7} alt="" />
+                        <div>
+                            <h3>Dr.Sathyapriya L.</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: sathyapl@srmist.edu.in 
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_11} alt="" />
+                        <div>
+                            <h3>Dr.A.Anbarasi</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: anbarasa3@srmist.edu.in
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_21} alt="" />
+                        <div>
+                            <h3>Dr.A.Arulmurugan</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: arulmura1@srmist.edu.in
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_20} alt="" />
+                        <div>
+                            <h3>Dr. Saranya V.S.</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: saranyav3@srmist.edu.in
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_16} alt="" />
+                        <div>
+                            <h3>Dr.Ajanthaa Lakkshmanan</h3>
+                            <span>Assistant Professor</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: ajanthal@srmist.edu.in
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div className="slide">
+                    <div className="user-info">
                         <img src={fac_9} alt="" />
                         <div>
-                            <h3>Rekha G.</h3>
-                            <span>Assistant Professor Jr.</span>
+                            <h3>Mrs. Rekha G.</h3>
+                            <span>Assistant Professor Jr.G</span>
                         </div>
                     </div>
                     <p>Department of Computing Technologies <br />
@@ -494,13 +516,33 @@ const Faculty = () => {
                     </p>
                 </div>
             </li>
+
+
+            <li>
+                <div className="slide">
+                    <div className="user-info">
+                        <img src={fac_8} alt="" />
+                        <div>
+                            <h3>Mrs. Ramya.M</h3>
+                            <span>Assistant Professor Jr.G</span>
+                        </div>
+                    </div>
+                    <p>Department of Computing Technologies <br />
+                        Mail Id: ramyam5@srmist.edu.in 
+                    </p>
+                </div>
+            </li>
+ 
+
+
+
             <li>
                 <div className="slide">
                     <div className="user-info">
                         <img src={fac_4} alt="" />
                         <div>
-                            <h3>Tamizhikkavi P.</h3>
-                            <span>Assistant Professor Jr.</span>
+                            <h3>Mr. Tamizhikkavi P.</h3>
+                            <span>Assistant Professor Jr.G</span>
                         </div>
                     </div>
                     <p>Department of Computing Technologies <br />

@@ -1,5 +1,8 @@
 .section_padding{
-    padding: 4rem 4rem;
+   padding-left: 2rem;
+   padding-right: 2rem;
+    padding-bottom: 0.3rem;
+    padding-top: 1.2rem;
 }
 .footer{
     background-color: #212ea0;
@@ -35,11 +38,20 @@ a {
     width: 200px !important;
 } */
 .logo-container img {
-    width: 300px;
+    width: 250px;
 }
 .logo-container {
     display: flex;
     
+}
+#root > div > div:nth-child(3) > div.footer > div > div.sb_footer-links > div:nth-child(2) > p.address{
+    font-size: 17px;
+}
+#root > div > div:nth-child(3) > div.footer > div > div.sb_footer-links > div:nth-child(3) > p:nth-child(1) {
+    line-height: 1.5;
+}
+#root > div > div:nth-child(3) > div.footer > div > div.sb_footer-links > div:nth-child(3) > p:nth-child(2) {
+    line-height: 1.5;
 }
 .socialmedia {
     display: flex;
@@ -48,7 +60,7 @@ a {
 .socialMedia  {
     display: flex;
     flex-direction: row;
-    justify-content: space-aro;
+    justify-content: space-between;
 }
 .sb_footer-links_div h4 {
     font-size: 25px;
@@ -56,7 +68,7 @@ a {
     margin-bottom: 0.9rem;
 }
 .sb_footer-links_div p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 15px;
     margin: 0.5rem 0;
     cursor: pointer;
@@ -83,8 +95,8 @@ hr {
     width: 100%;
 }
 .sb_footer-copyright p {
-    font-size: 18px;
-    line-height: 15px;
+    font-size: 15px;
+    line-height: 20px;
     color: rgb(255, 255, 255);
     font-weight: 600;
 }

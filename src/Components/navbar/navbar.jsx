@@ -31,6 +31,8 @@ const Navbar = () => {
           Faculty</Link></li>
         <li><Link to='section-with-image' smooth={true} offset={-260} duration={500}>
           Gallery</Link></li>
+          <li><Link to='footer' smooth={true} offset={-260} duration={500}>
+          Contact Us</Link></li>
       </ul>
       <img src={menu_icon} alt="" className='menu-icon' onClick={toggleMenu}/>
     </nav>

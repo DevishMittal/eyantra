@@ -60,11 +60,11 @@ optimize performance and resource utilization in parallel computing environments
 
           </div>
            <div className='image set'>
-              <img src={whatPhoto6} alt="" />
+              {/* <img src={whatPhoto6} alt="" /> */}
               <img src={whatPhoto3} alt="" />
               <img src={whatPhoto5} alt="" />
               <img src={whatPhoto4} alt="" />
-              <img src={whatPhoto2} alt="" />
+              {/* <img src={whatPhoto2} alt="" /> */}
               </div>
  
         </div>

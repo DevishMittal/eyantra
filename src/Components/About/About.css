@@ -12,7 +12,7 @@
 }
 .mission {
         box-shadow: 0 0 20px rgba(55, 21, 225, 0.75);
-        padding: 40px;
+        padding: 30px;
         border-radius: 10px;
         color: #3835f3;
         line-height: 1.4;
@@ -30,12 +30,12 @@ font-size: 3rem;
 }
 .mission-text{
     max-width: 800px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 
 }
 
 #root > div > div:nth-child(3) > div.about > div:nth-child(2) > div.mission-text > p {
-line-height: 2.5;
+line-height: 1.5;
 }
 .image {
 display: flex;
@@ -46,13 +46,13 @@ flex-direction: column;
     width: 350px;
     margin-top:1rem;
     box-shadow: 0 0 20px rgb(15, 198, 239);
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 15px;
     color: #3835f3;
 
 }
 .set img{
-    width: 260px;
+    width: 180px;
     margin: 30px;
     
 }

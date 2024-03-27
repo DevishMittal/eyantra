@@ -6,6 +6,10 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import srm_logo from '../../assets/srm.svg'
+import { FaPhone } from "react-icons/fa";
+import { RiContactsFill } from "react-icons/ri";
+import { IoMail } from "react-icons/io5";
+import { IoLocation } from "react-icons/io5";
 // import acc_logo from '../../assets/OIG2_upscayl_4x_realesrgan-x4plus.png'
 
 const Contact = () => {
@@ -22,21 +26,39 @@ const Contact = () => {
           </div>
           <div className='sb_footer-links_div'>
             <h4>Contact Details</h4>
-            <a href="/employer">
-              <p>Phone no: 484945451</p>
-            </a>
-            <a href="/employer">
-              <p>Phone no: 484945451</p>
-            </a>
-            <a href="/employer">
-              <p>Phone no: 484945451</p>
-            </a>
-            <a href="/employer">
-              <p>Email : srm@srmist.edu.in</p>
-            </a>
+        
+  
+            
+            
+              <p><RiContactsFill /> Dr. B Amutha</p>
+            
+            
+              <p><FaPhone />  +91 9445242714</p>
+            
+        
+              <p><IoMail />  amuthab@srmist.edu.in</p>
+
+              <p className='address'> <IoLocation /> Room No. 106, 1st Floor Tech Park, SRMIST, Potheri, Chennai, Tamil Nadu 603203 </p>
+      
           </div>
           <div className='sb_footer-links_div'>
-            <h4>Social Links</h4>
+            {/* <h4>Social Links</h4> */}
+            <p>Designed By: <br /> Dr. P. Kirubanantham <br />  
+                                    Dr. B. Prakash
+ </p>
+            <p>Developed By: <br /> Devish Mittal II Yr C.Tech </p>
+            
+          </div>
+        </div>
+        <hr></hr>
+        <div className='sb_footer-below'>
+          <div className='sb_footer-copyright'>
+            <p>
+              @{new Date().getFullYear()} SRMKTR Copyrights All rights reserved.
+            </p>
+          </div>
+          <div className='sb_footer-below-links'>
+            {/* <a href="/terms"><div><p>Privacy Policy</p></div></a> */}
             <div className='socialMedia'>
             <a href="https://www.facebook.com/SRMUniversityOfficial" target="_blank" rel="noopener noreferrer">
                 <FaFacebook size={30}/>
@@ -54,17 +76,7 @@ const Contact = () => {
               <FaYoutube size={30} />
               </a>
             </div>
-          </div>
-        </div>
-        <hr></hr>
-        <div className='sb_footer-below'>
-          <div className='sb_footer-copyright'>
-            <p>
-              @{new Date().getFullYear()} SRMKTR. All rights reserved.
-            </p>
-          </div>
-          <div className='sb_footer-below-links'>
-            <a href="/terms"><div><p>Privacy Policy</p></div></a>
+
           </div>
         </div>
       </div>
