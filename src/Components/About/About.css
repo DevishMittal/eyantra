@@ -43,7 +43,7 @@ flex-direction: column;
 
 }
 .image img{
-    width: 350px;
+    width: 260px;
     margin-top:1rem;
     box-shadow: 0 0 20px rgb(15, 198, 239);
     /* padding: 10px; */

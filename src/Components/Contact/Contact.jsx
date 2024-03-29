@@ -61,19 +61,19 @@ const Contact = () => {
             {/* <a href="/terms"><div><p>Privacy Policy</p></div></a> */}
             <div className='socialMedia'>
             <a href="https://www.facebook.com/SRMUniversityOfficial" target="_blank" rel="noopener noreferrer">
-                <FaFacebook size={30}/>
+                <FaFacebook size={30} color='white'/>
               </a>
               <a href="https://www.instagram.com/SRMUniversityOfficial/" target="_blank" rel="noopener noreferrer">
-              <FaInstagram size={30}/>
+              <FaInstagram size={30} color='white'/>
               </a>
               <a href="https://twitter.com/SRM_Univ" target="_blank" rel="noopener noreferrer">
-              <FaSquareXTwitter size={30}/>
+              <FaSquareXTwitter size={30} color='white'/>
               </a>
               <a href="https://www.linkedin.com/company/srm-ist-chennai" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin size={30}/>
+              <FaLinkedin size={30} color='white'/>
               </a>
               <a href="https://www.youtube.com/user/SRMeducation" target="_blank" rel="noopener noreferrer">
-              <FaYoutube size={30} />
+              <FaYoutube size={30} color='white' />
               </a>
             </div>
 

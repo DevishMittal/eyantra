@@ -3,6 +3,8 @@ import './Navbar.css'
 import logo from '../../assets/srm.svg'
 import { Link } from 'react-scroll';
 import menu_icon from '../../assets/menu-icon.png'
+import styles from '../Teacher/Teacher.module.css';
+
 const Navbar = () => {
 
     const [sticky, setSticky] = useState(false);
@@ -27,11 +29,13 @@ const Navbar = () => {
           About Us</Link></li>
         <li><Link to='project' smooth={true} offset={-290} duration={500}>
           Ongoing Projects</Link></li>
-        <li><Link to='faculty' smooth={true} offset={-290} duration={500}>
-          Faculty</Link></li>
-        <li><Link to='section-with-image' smooth={true} offset={-260} duration={500}>
+          <li><Link to='indicator' smooth={true} offset={350} duration={500} >
+            Faculty</Link></li>
+        {/* <li><Link to='person' smooth={true} offset={-290} duration={500}>
+          Faculty</Link></li> */}
+        <li><Link to='carousel' smooth={true} offset={-260} duration={500}>
           Gallery</Link></li>
-          <li><Link to='footer' smooth={true} offset={-260} duration={500}>
+          <li><Link to='footer' smooth={true} offset={-260} duration={1500}>
           Contact Us</Link></li>
       </ul>
       <img src={menu_icon} alt="" className='menu-icon' onClick={toggleMenu}/>

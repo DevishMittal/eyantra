@@ -68,7 +68,7 @@ const people = [
         id: 1,
         image: fac_1,
         name: 'Dr. R. S. Ponmagal',
-        title: 'Professor',
+        title: 'Associate Professor',
         quote: (
           <>
             Department of Computing Technologies <br /> Mail Id: ponmagas@srmist.edu.in 
@@ -90,7 +90,7 @@ const people = [
         id: 1,
         image: fac_12,
         name: 'Dr. J. D. Dorathi Jayaseeli',
-        title: 'Assistant Professor',
+        title: 'Associate Professor',
         quote: (
           <>
             Department of Computing Technologies <br /> Mail Id: dorathij@srmist.edu.in
