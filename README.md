@@ -1,1 +1,1 @@
-https://accelerated-computing-srmktr.netlify.app
+https://accelerated-computing.vercel.app/
