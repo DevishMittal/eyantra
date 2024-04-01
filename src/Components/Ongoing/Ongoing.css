@@ -31,12 +31,13 @@
     opacity: 0; /* Initially hidden */
     transition: opacity 0.3s ease; /* Smooth transition */
     font-size: 18px;
+    align-self: center;
   }
   
   .project:hover .overlay {
     opacity: 1; /* Show overlay on hover */
   }
-  
+
   .text-above-image {
     position: absolute;
     top: 40%; /* Center vertically */

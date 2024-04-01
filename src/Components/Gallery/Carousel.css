@@ -113,7 +113,7 @@
   
   .slide {
     border-radius: 0.5rem;
-    box-shadow: 0px 0px 7px #666;
+    box-shadow: 0px 0px 7px #212ea0;
     width: 100%;
     height: 100%;
   }
@@ -155,7 +155,7 @@
     border-radius: 100%;
     border: none;
     outline: none;
-    box-shadow: 0px 0px 5px #555;
+    box-shadow: 0px 0px 5px #212ea0;
     margin: 0 0.2rem;
     cursor: pointer;
   }

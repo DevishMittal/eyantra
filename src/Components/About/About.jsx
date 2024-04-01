@@ -1,10 +1,10 @@
 import React from 'react'
 import whatPhoto1 from '../../assets/mission.jpg'
-import whatPhoto2 from '../../assets/OIG4.oBzy.png'
-import whatPhoto3 from '../../assets/OIG1 (1).png'
-import whatPhoto4 from '../../assets/OIG1.CRDufi3me5LC_yHE.png'
-import whatPhoto5 from '../../assets/OIG1.mJBMBvDd.png'
-import whatPhoto6 from '../../assets/OIG2 (1).png'
+// import whatPhoto2 from '../../assets/OIG4.oBzy.jpeg'
+import whatPhoto3 from '../../assets/OIG1 (1).jpeg'
+import whatPhoto4 from '../../assets/OIG1.CRDufi3me5LC_yHE.jpeg'
+import whatPhoto5 from '../../assets/OIG1.mJBMBvDd.jpeg'
+// import whatPhoto6 from '../../assets/OIG2 (1).png'
 import './About.css'
 const Programs = () => {
   return (

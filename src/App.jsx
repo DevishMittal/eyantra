@@ -8,8 +8,9 @@ import Contact from './Components/Contact/Contact'
 import Teacher from './Components/Teacher/Teacher'
 // import Slider from './Components/Gallery/Gallery'
 // import Carousel from './Components/Gallery/Carousel'
-import { slides, slides2 } from './data/carouselData.json'
+// import { slides } from './Components/data/carouselData.json'
 import { Carousel } from "./Components/Gallery/Carousel";
+import { Carousel2 } from "./Components/Gall2/Carousel2";
 // import Gallery1 from './Components/Gallery/Gallery'
 // import Faculty from './Components/Faculty/Faculty'
 // import Gallery, { SecondSectionWithImage } from './Components/Gallery/Gallery'
@@ -29,9 +30,9 @@ const App = () => {
          <Title subTitle={'Gallery'} title={'Discover Our Captured Moments'}/>
          <Title  title={'MOU-CDAC'}/>
          {/* <Slider images={images} title="Automatic Image Slider" /> */}
-         <Carousel data={slides}/> 
+         <Carousel/> 
          <Title  title={'Outreach Program'}/>
-         <Carousel data={slides2}/>
+         <Carousel2/>
         <Title subTitle={'Faculty'} title={'Know About our Faculty'}/>
         <Teacher />
       <Title subTitle={'Contact Us'} title={'Get in Touch'}/>
