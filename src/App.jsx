@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import About from './Components/About/About'
 import Hero from './Components/Hero/Hero'
+import Login from './Components/Login/Login'
 import Navbar from './Components/Navbar/Navbar'
 import Title from './Components/Title/Title'
 import Ongoing from './Components/Ongoing/Ongoing'
@@ -20,6 +21,7 @@ import { Carousel2 } from "./Components/Gall2/Carousel2";
 const App = () => {
   return (
     <div>
+      <Login />
       <Navbar/>
       <Hero/>
       <div className='container'>
