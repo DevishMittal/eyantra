@@ -112,7 +112,7 @@ const people = [
         id: 1,
         image: fac_3,
         name: 'Dr. R. Jeya',
-        title: 'Assistant Professor',
+        title: 'Associate Professor',
         quote: (
           <>
             Department of Computing Technologies <br /> Mail Id: jeyar@srmist.edu.in
